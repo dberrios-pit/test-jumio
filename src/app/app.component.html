@@ -1,10 +1,22 @@
 <div>
   <h3>HEADER</h3>
 </div>
-
-  <iframe src="https://patagoniatest.netverify.com/web/v4/app/start-verification?authorizationToken=eyJhbGciOiJIUzUxMiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAAAB3MPQvCMBDG8e9ycw9yvSRN3BwqdHEoRXCSy5u4aJAKivjdjY4P_x_PG_Jzu8KGjDXsmL0xmjqQKcEGolKZZPDoUiioZejR95YwqmjZEbPRCTqIcy5NV1nlfLte5FTvjxyEfun_QzarwtGh5yGgZi4ors2guPcsSTLFhuvyqk3vx-UwztPuCJ8vFWFM9J4AAAA.tCvBvmfOkK88jB3AsQXoa4dEcieuCkOw72LpYIKjNm4AbNs8DUqa2kmG-o1P-TR6FXyujZErljy2ZEtjdmZYEg&locale=es-MX" 
-  frameborder="0" width="70%" height="80%" allow="camera"></iframe>
-
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-2">
+      <div class="btn-group btn-group-toggle">
+        <label class="btn-primary" ngbButtonLabel>
+          <form (ngSubmit)="onSubmit()">
+            <input type="submit" ngbButton [(ngModel)]="model.middle"  [ngModelOptions]="{standalone: true}"> Generar token
+          </form>
+        </label>
+      </div>
+    </div>
+    <div *ngIf="loaded === true" class="col-12 col-md-8">
+      <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(url)" frameborder="0" width="700px" height="480px" allow="camera"></iframe>
+    </div>
+  </div>
+</div>
 <div>
   <h3>FOOTER</h3>
 </div>

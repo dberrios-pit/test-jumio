@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  username: `816ec4c9-ae73-4dbd-b572-87d09a97350c`,
+  password: `QN2nH8YmfA5FOC73YzJiA6aevgC1HaAJ`,
+  apiInit: `https://netverify.com/api/v4/initiate`,
+  customerInternalReference: 'patagonia_prueba1',
+  userReference: 'prueba_diego'
 };
 
 /*
